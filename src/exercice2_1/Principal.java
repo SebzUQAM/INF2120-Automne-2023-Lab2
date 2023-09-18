@@ -12,6 +12,9 @@ public class Principal {
      * @param args Les arguments de ligne de commande (non utilisés dans ce programme).
      */
     public static void main(String[] args){
+
+        System.out.println(exSigleton.getInstance().lumiere());
+
         Facture facture = new Facture();
 
         facture.ajouterProduit(new NonTaxable("Article1", 100.00));
@@ -33,6 +36,8 @@ public class Principal {
 
         facture.ajouterProduit(new TaxeDouble("Article10", 15.50));
         facture.ajouterProduit(new TaxeDouble("Article11", 9.40));
+
+        facture.ajouterProduit(new Produit("pomme", 9.15));
 
         System.out.println(facture.prixTotal());
     }

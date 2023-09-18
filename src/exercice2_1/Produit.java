@@ -3,8 +3,8 @@ package exercice2_1;
 /**
  * La classe abstraite Produit est une classe de base pour représenter un produit.
  */
-public abstract class Produit {
-    private String nom;
+public class Produit {
+    protected String nom;
     private double prixProduit;
 
     /**

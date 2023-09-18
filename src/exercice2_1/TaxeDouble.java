@@ -6,6 +6,8 @@ package exercice2_1;
 public class TaxeDouble extends Produit {
     private final double TAXE = 1.09975;
 
+    private String nom;
+
     /**
      * Constructeur de la classe TaxeDouble.
      *
@@ -15,6 +17,7 @@ public class TaxeDouble extends Produit {
     public TaxeDouble(String nom, double prix) {
 
         super(nom, prix);
+        this.nom = nom;
     }
 
     /**

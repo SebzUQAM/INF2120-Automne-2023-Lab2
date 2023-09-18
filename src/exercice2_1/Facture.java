@@ -16,9 +16,10 @@ public class Facture {
     public void ajouterProduit( Produit produit ){
         if(indexProduit == produits.length){
             System.err.println(AVERTISSEMENT_TABLEAU_PLEIN);
+        }else {
+            produits[indexProduit] = produit;
+            indexProduit++;
         }
-        produits[indexProduit] = produit;
-        indexProduit++;
     }
 
     /**
@@ -28,8 +29,6 @@ public class Facture {
      */
     public double prixTotal(){
         double prixTotal = 0;
-
-        int index = 0;
 
         for(int i=0;i<indexProduit;i++){
             prixTotal = prixTotal + produits[i].prix();
