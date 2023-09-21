@@ -8,6 +8,19 @@ public class Facture {
     private Produit[] produits = new Produit[30];
     private int indexProduit = 0;
 
+
+    public void ajouterProduitNonTaxable( NonTaxable produit ){
+        ajouterProduit(produit);
+    }
+
+    public void ajouterProduitTaxeSimple( TaxeSimple produit ){
+        ajouterProduit(produit);
+    }
+
+    public void ajouterProduitTaxeDouble( TaxeDouble produit ){
+        ajouterProduit(produit);
+    }
+
     /**
      * Ajoute un produit à la facture.
      *
